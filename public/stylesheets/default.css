@@ -1,0 +1,253 @@
+/*css reset*/
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address,
+variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  /*font-size: 100%;
+  font-weight: normal;*/
+  font-size: 100%; /* Resets 1em to 10px */
+  font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+  /*background: #d5d6d7 url('images/kubrickbgcolor.jpg');
+  color: #333;
+  text-align: center;*/
+
+}
+ol {
+  margin-left: 1.4em;
+  list-style: decimal;
+}
+ul {
+  margin-left: 1.4em;
+  list-style:square;
+}
+img {
+  border: 0;
+}
+#banniere
+{
+	background: #73a0c5 url('/images/kubrickheader2.jpg') no-repeat bottom center;
+	margin : auto;
+	width : 760px;
+	height: 200px;
+	/*border : solid 1px;*/
+	
+	
+}
+
+#wrapper
+{
+	background: white url("/images/kubrickbgwide.jpg");
+   background-repeat: repeat-y;
+   margin : auto;
+  	width: 760px;
+	border: solid 1px #f2f6f7;
+}
+#content
+{
+	margin : 26px;
+	font-size: 12px;
+	width: 700px;
+	border: solid 2px #FFFFFF;	
+}
+
+
+
+
+/*#logo
+{
+	margin-top: 10px;
+	width : 120px;
+	height : 129px;
+	float : right;
+}
+*/
+
+
+#content h1#footer#footer
+
+
+{
+	font-weight: bold;
+	font-size :18px;
+	margin-bottom: 5px;
+	
+	
+	}
+
+
+#footer
+{
+	margin : auto;
+	width : 760px;
+	height: 63px;
+	/*border: solid 2px;*/
+	background-color :#627aad	;
+	
+}
+
+#footer p
+{
+		
+	font-weight: bold;
+	font-size : 11px;
+	text-align : center;
+	color: #f1f3fa;
+	
+	
+}
+
+/*.form p{
+width: 700px;
+clear: left;
+margin: 0;
+padding: 5px 0 8px 0;
+/*padding-left: 155px; /*width of left column containing the label elements
+border-top: 1px dashed gray;
+height: 1%;
+}*/
+/*#new_participant .label {
+	
+	float: left;
+	width: 150px;
+	margin-right: 10px;
+	text-align: right;
+	font-weight: bold;
+	clear: left;
+
+}
+
+.label {
+	
+	float: left;
+	width: 150px;
+	margin-right: 10px;
+	text-align: right;
+	font-weight: bold;
+	clear: left;
+
+}
+
+#subscribe {
+  margin-left: 160px;
+  
+}*/
+#form p
+{
+	margin: 2px 0;
+}
+
+#form fieldset
+{
+  
+	/*margin-bottom: 10px;
+	margin-left : 10px;*/
+	border: #CCC 1px solid;
+	width : 702px;
+}
+#form fieldset:hover
+{
+	background-color: #FFF;
+}
+#form fieldset legend
+{
+	/*padding: 0 25px;*/
+	border-left: #CCC 1px solid;
+	border-right: #CCC 1px solid;
+	font-size: 1.2em;
+	color: #999;
+}
+#form label
+{
+	background-color: #FFFFFF;
+	display: block;
+	margin-top: 3px;
+	width: 23%;
+	float: left;
+	padding-right: 1%;
+	text-align: right;
+	letter-spacing: 1px;
+}
+#form label:hover
+{
+	font-weight: bold;
+}
+#form .form_label_nostyle
+{
+	background: none;
+}
+/* Input */
+#form input 
+{
+	margin-left: 1%;
+	width: 48%;
+	border: #CCC 1px solid;
+}
+
+#form textarea
+{
+	margin-left: 1%;
+	width: 48%;
+	height:100px;
+	border: #CCC 1px solid;
+}
+
+#form input[type=radio] {
+ margin-right:10px;
+ background-color:transparent;
+ border:none;
+ }
+ 
+/* button submit */
+#form input[type="submit"]
+{
+   font-weight: bold;		
+	/*border:     1px solid;*/
+	width: 180px;
+	margin-left: 524px;
+	
+}
+
+#form input[type="submit"]:hover
+{
+	
+	background-color: #FFCC66;
+	cursor: pointer;
+}
+
+#form input[type="reset"]
+{
+	border: #DDEEFF 1px solid;
+	width: 27%;
+}
+
+#form input[type="reset"]:hover
+{
+	background-color: #E6484D;
+	cursor: pointer;
+}
+
+.message 
+{
+      margin-bottom: 10px;
+    }
+.message div {
+      padding: 10px 10px 15px 50px;
+    }
+.message .succes {
+      border: 1px solid #2b8a0d;
+      background: url("/images/val.jpg") /*10px 5px*/ no-repeat;
+      color: #2b8a0d;
+    }
+.message .avertissement 
+{     color: #dd4f00;
+      color: #dd4f00;
+      border: 1px solid #dd4f00;  color: #dd4f00;
+      background: url("/images/aver.jpg") 10px 5px no-repeat;
+      color: #dd4f00;
+    }
+.message p {
+      font-weight: bold;
+    }
+    
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><%= yield(:title) %></title>
+<%= stylesheet_link_tag 'default.css' %>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load ("visualization", "1", {packages:["columnchart"], 'language' : 'fr'});
+google.setOnLoadCallback(drawChart);
+function drawChart()
+{
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'Mois');
+data.addColumn('number', 'Nombres dusagers');
+data.addColumn('number', 'Moyenne usager');
+data.addRows(12);
+data.setValue(0,0,'Janvier','orange');
+data.setValue(0,1,1000);
+data.setValue(0,2,200);
+data.setValue(1,0,'Février');
+data.setValue(1,1,1170);
+data.setValue(1,2,460);
+data.setValue(2,0,'Mars');
+data.setValue(2,1,2660);
+data.setValue(2,2,1120);
+data.setValue(3,0,'Avril');
+data.setValue(3,1,1030);
+data.setValue(3,2,540);
+data.setValue(4,0,'Mai');
+data.setValue(4,1,1030);
+data.setValue(4,2,540);
+data.setValue(5,0,'Juin');
+data.setValue(5,1,1030);
+data.setValue(5,2,540);
+data.setValue(6,0,'Juillet');
+data.setValue(6,1,1030);
+data.setValue(6,2,540);
+data.setValue(7,0,'Aout');
+data.setValue(7,1,1030);
+data.setValue(7,2,540);
+data.setValue(8,0,'Septembre');
+data.setValue(8,1,1030);
+data.setValue(8,2,540);
+data.setValue(9,0,'Octobre');
+data.setValue(9,1,1030);
+data.setValue(9,2,540);
+data.setValue(10,0,'Novembre');
+data.setValue(10,1,1030);
+data.setValue(10,2,540);
+data.setValue(11,0,'Décembre');
+data.setValue(11,1,1030);
+data.setValue(11,2,540);
+var chart = new google.visualization.ColumnChart(document.getElementById('graphe_div'));
+chart.draw(data, {width: 600, height:240,is3D: true,colors:['green','red'],title: 'Usagers'});
+}
+</script>
+
+</head>
+
+<body>
+	
+	<div id="banniere">
+	</div>
+	<div id="wrapper">
+	
+	<div id="content">
+	<% flash.each do |key, msg| %>
+      <%= content_tag(:div, content_tag(:p, msg), :class => "message #{key}") %>
+    <% end %>
+    <%= error_messages_for 'usager' %>
+     
+		<%= yield %>
+		</div>
+	</div>
+	<div id="footer"><img src="/images/kubrickfooter2.jpg" >
+	</div>
+</body>
+</html>

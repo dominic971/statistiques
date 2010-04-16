@@ -1,0 +1,21 @@
+<div id="graphe_div"></div>
+<% title "Tableau de bord" %>
+<% description "Resume" %>
+<%= @datetime1 %><br />
+<%= @moyusager %>
+<p>Le jour où il a eu le moins d'usagers: <%= @Jourminusager %><br />
+<p>Le jour où il a eu le plus d'usagers: <%= @Jourmaxusager %><br />
+<p>Nombre total d'usagers entre 2 dates : <b><%= @entre2dates %></b></p>
+<%= @nu_moisencours %>
+<p>Nous somme le <%= @date %></p>
+<p>Mois en cours: <%= @mois_en_cours %><p>
+<p>Nombre total d'usagers : <b><%= @nbre_usagers %></b><p>
+<p>Nombre total d'usagers pour le mois en cours : <b><%= @nbre_usager_mois_en_cours %></b><p>
+<%= date_select("usa", "written_on", :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' })%>
+
+<!--<ul>
+<% for usager in @usagers %>
+	<li><a href="/usagers/<%= usager.id %>"><%= usager.id %></a></li>
+<% end %>
+</ul>-->
+

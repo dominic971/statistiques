@@ -1,0 +1,5 @@
+class Usager < ActiveRecord::Base
+validates_presence_of  :sexe, :age, :num_tel, :email, :sit_sociale, :niv_form, :zone_geo, :sat_service, :themes, :compl_reponses
+validates_format_of :email,:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
+validates_numericality_of :num_tel
+end

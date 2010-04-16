@@ -1,0 +1,79 @@
+<% title "Inserer un nouvel usager" %>
+<% description "Un nouvel usager" %>
+      
+<%= error_messages_for 'usager' %>  
+<!--<h1>Nouvel usager</h1>-->
+
+<div id="form">
+<class = cssform><% form_for(@usager,:url=>{:action=>'create'}) do |f| %>
+<fieldset>
+<legend>Identité</legend>
+<p>
+<b><label for="sexe">Sexe:</label> </b>
+M<%= radio_button("usager", "sexe", "m") %>F<%= radio_button("usager", "sexe", "f") %>
+</p>
+
+<p>
+<b><label for="Age" >Age:</label> </b>
+Moins de 16 ans<%= radio_button("usager", "age", "-16") %>17-25 ans<%= radio_button("usager", "age", "17-25") %>26-35 ans<%= radio_button("usager", "age", "26-35") %>
+35-45 ans<%= radio_button("usager", "age", "35-45") %>+ de 45 ans<%= radio_button("usager", "age", "+45") %>
+</p>
+
+<!--<p>
+<b><label for="Sit_famil">Situation familliale:</label></b>
+Célibataire<%= radio_button("usager", "sit_famil", "cel") %>Marié(e)<%= radio_button("usager", "sit_famil", "mar") %>Divorcé(e)<%= radio_button("usager", "sit_famil", "div") %>
+Pacsé(e)<%= radio_button("usager", "sit_famil", "pacs") %>Concubinage<%= radio_button("usager", "sit_famil", "conc") %>
+</p>-->
+
+<p>
+<b><label for="sit_sociale">Situation sociale: </label></b>
+Scolaire<%= radio_button("usager", "sit_sociale", "sco") %>Etudiant(e)<%= radio_button("usager", "sit_sociale", "mar") %>"Demandeur d'emploi"<%= radio_button("usager", "sit_sociale", "dememp") %>Salarié(e)<%= radio_button("usager", "sit_sociale", "sal") %>Retraité(e)<%= radio_button("usager", "sit_sociale", "ret") %>
+</p>
+
+<p>
+
+
+<p>
+<b><label for="niv_form">Niveau de formation: </label></b>
+Bac +<%= radio_button("usager", "niv_form", "bac+") %>bac<%= radio_button("usager", "niv_form", "bac") %>3e/Bep/Cap<%= radio_button("usager", "niv_form", "3bc") %>
+</p>
+</fieldset>
+<br />
+<fieldset>
+<legend>Coordonnées</legend>
+<p><b><label for="num_tel">Téléphone: </label></b>
+<%= f.text_field :num_tel %>
+</p>
+
+<p>
+<b><label for="email">Email: </label></b>
+<%= f.text_field :email %>
+</p>
+<b>
+<label for="zone_geographique">Zone<br />géographique: </label></b>
+Nord gde-terre<%= radio_button("usager", "zone_geo", "ng") %>sud gde-terre<%= radio_button("usager", "zone_geo", "sg") %>Nord basse-terre<%= radio_button("usager", "zone_geo", "nb") %>Nord basse-terre<%= radio_button("usager", "zone_geo", "sb") %><br />
+Centre<%= radio_button("usager", "zone_geo", "cen") %>Dépendances<%= radio_button("usager", "zone_geo", "dep") %>
+</p>
+</fieldset>
+<br />
+<fieldset>
+<legend>Demande</legend>
+<p>
+<b><label for="themes">Quel est le sujet de votre demande ?: </label></b>
+Enseignements<%= radio_button("usager", "themes", "ens") %>Formation<%= radio_button("usager", "themes", "formation") %>Métiers<%= radio_button("usager", "themes", "metier") %>Emploi<%= radio_button("usager", "themes", "emploi") %>Société, vie pratique<%= radio_button("usager", "themes", "soc") %>
+Loisirs<%= radio_button("usager", "themes", "loisirs") %>Vacances<%= radio_button("usager", "themes", "vac") %>Etranger<%= radio_button("usager", "themes", "etranger") %>Sport<%= radio_button("usager", "themes", "sport") %>
+</p>
+<p><b><label for="sat_service">Satisfaction: </label></b>
+Très satisfait<%= radio_button("usager", "sat_service", "ts") %>Satisfait<%= radio_button("usager", "sat_service", "s") %>Partiellement satisfait<%= radio_button("usager", "sat_service", "ps") %>
+Pas du tout satisfait<%= radio_button("usager", "sat_service", "pdts") %>
+</p>
+<b><label for="compl_reponses">Completer votre réponse: </label></b>
+<%= f.text_area :compl_reponses %>
+<p>
+</p>
+</fieldset>
+<p>
+<%= f.submit "Valider" %>
+</p>
+<% end %>
+</div>

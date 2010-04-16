@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sexe: MyString
+  age: 1
+  sit_famil: MyString
+  sit_sociale: MyString
+  zone_geo: MyString
+  niv_form: MyString
+  num_tel: MyString
+  email: MyString
+  sat_service: MyString
+
+two:
+  sexe: MyString
+  age: 1
+  sit_famil: MyString
+  sit_sociale: MyString
+  zone_geo: MyString
+  niv_form: MyString
+  num_tel: MyString
+  email: MyString
+  sat_service: MyString
